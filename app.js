@@ -70,7 +70,7 @@ const render = function () {
 
     // Then dynamicaly generating buttons for each stock in the array
     // This code $('<button>') is all jQuery needs to create the beginning and end tag. (<button></button>)
-    const newButton = $('<button class="btn-block btn-outline-primary p-1 m-2">');
+    const newButton = $('<button class="btn-block btn-outline-success p-1 m-2">');
 
     // Adding a class of stock-btn to our button
     newButton.addClass('stock-btn');
