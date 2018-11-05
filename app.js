@@ -29,22 +29,29 @@ const displayStockInfo = function () {
     const logo = response.logo.url;
     const articleUrl = response.news[0].url;
 
-    $('#stocks-view').prepend(`  <div class="jumbotron">
-    <img src="${logo}" alt="Card image">
-    <div class="card my-3">
-        <h5 class="card-header">${companyName}</h5>
-        <ul class="list-group list-group-flush">
-            <li class="list-group-item">Stock Symbol: ${stockSymbol}</li>
-            <li class="list-group-item"> Stock Price: $${stockPrice}</li>
-         </ul>
-         <div class="card-body">
-             <p class="card-text">${companyNews}</p>
-          </div>
-         <div class="card-footer">
-             <a href="${articleUrl}" class="card-link">More Info</a>
-          </div>
+    $('#stocks-view').prepend(`<div class="jumbotron">
+    <div class="row">
+      <div class="col-sm-3">
+        <img src="${logo}" alt="Card image">
       </div>
-      </div>`);
+      <br>
+      <div class="col-sm-9">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Stock Symbol: ${stockSymbol}</li>
+          <li class="list-group-item"> Stock Price: $${stockPrice}</li>
+        </ul>
+      </div>
+    </div>
+    <div class="card my-3">
+      <h5 class="card-header">${companyName}</h5>
+      <div class="card-body">
+        <p class="card-text">${companyNews}</p>
+      </div>
+      <div class="card-footer">
+        <a href="${articleUrl}" class="card-link" target="_blank">More Info</a>
+      </div>
+    </div>
+  </div>`);
 
   });
 
